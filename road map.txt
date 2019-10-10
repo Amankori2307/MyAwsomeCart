@@ -1,0 +1,40 @@
+Ecommmerce website:-
+	-creating apps(shop, blog)
+	-adding bootstrap templates and static
+	-project layout
+	-model
+	-adding data to database
+	-home page
+	-change model
+	-media directory
+	list the products
+	fetching product using shell
+	template inheritence 
+	logic for showing product
+	showing multiple product slides
+	category wise product display
+	create cart
+	improving slider logic
+	adding bootstrap row and some css
+	create contact page
+	improving cart
+	create add and remove buttons
+	create a cart in navigation bar
+	adding checkout and crearcart buttons
+	creating the checkout page
+	adding item on checkout page
+	creating database entry for orders
+	creating order tracker
+	creating order tracker for customers
+	displaying order items in tracker
+	merging blog app into shop 
+	creating blog
+	models for blog
+	blog post
+	post page for displaying blog content
+	blog home
+	blog post to blog home
+	itegreting facebook like comments and share in django
+	integreting paytm gateway
+	fixing a bug
+	hosting django website 

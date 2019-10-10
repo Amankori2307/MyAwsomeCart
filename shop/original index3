@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+        .img-fluid{
+            max-width : 400px;
+            height:auto;
+        }
+        .card{
+            color:white;
+        }
+    </style>
+  </head>
+  <body >
+    {% load static %}
+    <!-- start container-->
+    <div class = "conatiner border m-5">
+        
+        <!--Start carousel-->
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+            <!--Start indicators-->    
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <!--End indicators-->
+
+            <!--Start carousel inner -->
+            <div class="carousel-inner">
+
+                <!--start carousel item-->
+                <div class="carousel-item active">
+
+                    <!--Start card group-->
+                    <div class="card-group">
+
+                        {% for i in products%}
+                        <!--Start card-->
+                        <div class="card bg-primary">
+                            <img src="{%static 'shop/flipflop.jpg'%}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">{{i}}.Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                            <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                        <!--End card-->
+                        {% if forloop.counter|divisibleby:4%}
+                            </div>
+                            <!--end card group-->
+                            </div>
+                            <!--end carousel item-->
+
+                            <!--start carousel item-->
+                            <div class="carousel-item">
+                            <!--Start card group-->
+                            <div class="card-group">
+                        {% endif %}
+                        {% if forloop.last%}
+                            </div>
+                            <!--end card group-->
+                            </div>
+                            <!--end carousel item-->
+                        {% endif %}
+                        {% endfor %}
+                        </div>
+
+                        <!--Start card-->
+                        <div class="card bg-success">
+                            <img src="{%static 'shop/flipflop.jpg'%}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                            <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                        <!--End card-->
+
+
+                        <!--Start card-->
+                        <div class="card bg-info">
+                            <img src="{%static 'shop/flipflop.jpg'%}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                            <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                        <!--End card-->
+
+                        <!--Start card-->
+                        <div class="card bg-warning">
+                            <img src="{%static 'shop/flipflop.jpg'%}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                            </div>
+                            <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                        <!--End card-->
+
+                    </div>
+                    <!--End card group-->
+
+                </div>
+                <!--End carousel item-->
+
+                <!--start carousel item-->
+                <div class="carousel-item ">
+
+                    <!--Start card group-->
+                    <div class="card-group">
+
+                        <!--Start card-->
+                        <div class="card bg-primary">
+                            <img src="{%static 'shop/camera.jpg'%}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                            <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                        <!--End card-->
+
+
+                        <!--Start card-->
+                        <div class="card bg-success">
+                            <img src="{%static 'shop/camera.jpg'%}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                            <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                        <!--End card-->
+
+                        <!--Start card-->
+                        <div class="card bg-info">
+                            <img src="{%static 'shop/camera.jpg'%}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                            <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                        <!--End card-->
+
+                        <!--Start card-->
+                        <div class="card bg-warning">
+                            <img src="{%static 'shop/camera.jpg'%}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                            </div>
+                            <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                        <!--End card-->
+
+                    </div>
+                    <!--End card group-->
+
+
+                </div>
+                <!--End carousel item-->
+                <!--start carousel item-->
+                <div class="carousel-item">
+
+                    <!--Start card group-->
+                    <div class="card-group">
+
+                        <!--Start card-->
+                        <div class="card bg-primary">
+                            <img src="{%static 'shop/test.jpg'%}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                            <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                        <!--End card-->
+
+                        <!--Start card-->
+                        <div class="card bg-success">
+                            <img src="{%static 'shop/camera.jpg'%}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                            <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                        <!--End card-->
+
+
+                        <!--Start card-->
+                        <div class="card bg-info">
+                            <img src="{%static 'shop/test.jpg'%}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                            <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                        <!--End card-->
+
+                        <!--Start card-->
+                        <div class="card bg-warning">
+                            <img src="{%static 'shop/test.jpg'%}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                            </div>
+                            <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                        <!--End card-->
+
+                    </div>
+                    <!--End card group-->
+
+
+                </div>
+                <!--End carousel item-->
+                
+            </div>
+            <!-- end carousel inner-->
+
+            <!-- Start prev button-->
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <!-- End prev button-->
+
+            <!-- Start next button-->
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+            <!-- End next button-->
+
+        </div>
+        <!--End carousel-->
+
+    </div>
+    <!-- end container-->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
